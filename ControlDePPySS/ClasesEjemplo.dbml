@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sistemaBibliotecario" Class="ClasesEjemploDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-C2N5CN6\SQLEXPRESS;Initial Catalog=sistemaBibliotecario;User ID=sa" SettingsObjectName="ControlDePPySS.Properties.Settings" SettingsPropertyName="sistemaBibliotecarioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Areas" Member="Areas">
+    <Type Name="Area">
+      <Column Name="areCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="areNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="areTiempo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Area_Libro" Member="Libros" ThisKey="areCodigo" OtherKey="areCodigo" Type="Libro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="usuDocumento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usuDireccion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usuTelefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="usuCorreo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usuEstado" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Prestamo" Member="Prestamos" ThisKey="usuDocumento" OtherKey="usuDocumento" Type="Prestamo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetallePrestamos" Member="DetallePrestamos">
+    <Type Name="DetallePrestamo">
+      <Column Name="dtpCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dtpCantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dtpFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="dtpFechaDev" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="preCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="libCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Libro_DetallePrestamo" Member="Libro" ThisKey="libCodigo" OtherKey="libCodigo" Type="Libro" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Prestamo_DetallePrestamo" Member="Prestamo" ThisKey="preCodigo" OtherKey="preCodigo" Type="Prestamo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Libros" Member="Libros">
+    <Type Name="Libro">
+      <Column Name="libCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="libNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="libNumPag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="libAutor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="libEditorial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="areCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Libro_DetallePrestamo" Member="DetallePrestamos" ThisKey="libCodigo" OtherKey="libCodigo" Type="DetallePrestamo" />
+      <Association Name="Area_Libro" Member="Area" ThisKey="areCodigo" OtherKey="areCodigo" Type="Area" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Prestamos" Member="Prestamos">
+    <Type Name="Prestamo">
+      <Column Name="preCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="preFecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="usuDocumento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Prestamo_DetallePrestamo" Member="DetallePrestamos" ThisKey="preCodigo" OtherKey="preCodigo" Type="DetallePrestamo" />
+      <Association Name="Prestamo_Sancione" Member="Sanciones" ThisKey="preCodigo" OtherKey="preCodigo" Type="Sancione" />
+      <Association Name="Usuario_Prestamo" Member="Usuario" ThisKey="usuDocumento" OtherKey="usuDocumento" Type="Usuario" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sanciones" Member="Sanciones">
+    <Type Name="Sancione">
+      <Column Name="sanCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sanDiasSancion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sanFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="sanFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="preCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Prestamo_Sancione" Member="Prestamo" ThisKey="preCodigo" OtherKey="preCodigo" Type="Prestamo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

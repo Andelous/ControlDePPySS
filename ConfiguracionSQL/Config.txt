@@ -1,0 +1,8 @@
+Reglas de Firewall para puertos 1433
+
+En la aplicación Sql Server Configuration Manager ir a
+	 - SQL Server Network Configuration
+		 - Protocols for SQLEXPRESS
+		 Activar el TCP/IP, además de limpiar la caja de texto de Dynamic ports, y escribir 1433 en la caja Port
+
+Mantener corriendo los servicios de Instancia y Browser.

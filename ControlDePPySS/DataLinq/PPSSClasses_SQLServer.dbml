@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PPSS" Class="PPSSClasses_SQLServerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-0ROCSOC\SQLEXPRESS;Initial Catalog=PPSS;User ID=sa" SettingsObjectName="ControlDePPySS.Properties.Settings" SettingsPropertyName="PPSSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Alumno" Member="Alumnos">
+    <Type Name="Alumno">
+      <Column Name="matricula" Type="System.String" DbType="VarChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_paterno" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_materno" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ano_ingreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="licenciatura_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Alumno_Solicitud" Member="Solicituds" ThisKey="matricula" OtherKey="matricula" Type="Solicitud" />
+      <Association Name="Licenciatura_Alumno" Member="Licenciatura" ThisKey="licenciatura_id" OtherKey="licenciatura_id" Type="Licenciatura" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="identificador" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contrasena" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_usuario_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TipoUsuario_Usuario" Member="TipoUsuario" ThisKey="tipo_usuario_id" OtherKey="tipo_usuario_id" Type="TipoUsuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CartaAceptacion" Member="CartaAceptacions">
+    <Type Name="CartaAceptacion">
+      <Column Name="carta_aceptacion_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="horas_a_liberar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="lunes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="martes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="miercoles" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="jueves" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viernes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="sabado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="domingo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="hora_entrada" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="hora_salida" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="solicitud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Solicitud_CartaAceptacion" Member="Solicitud" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="Solicitud" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entregas" Member="Entregas">
+    <Type Name="Entrega">
+      <Column Name="entrega_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="solicitud" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="carta_aceptacion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ficha_identificacion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="reportes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="reporte_final" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="informe_final" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="evaluacion_final" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="carta_liberacion_elemento" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="solicitud_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="carta_aceptacion_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ficha_identificacion_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="reportes_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="reporte_final_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="informe_final_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="evaluacion_final_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="carta_liberacion_comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="solicitud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Solicitud_Entrega" Member="Solicitud1" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="Solicitud" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Licenciatura" Member="Licenciaturas">
+    <Type Name="Licenciatura">
+      <Column Name="licenciatura_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="duracion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Licenciatura_Alumno" Member="Alumnos" ThisKey="licenciatura_id" OtherKey="licenciatura_id" Type="Alumno" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organizacion" Member="Organizacions">
+    <Type Name="Organizacion">
+      <Column Name="organizacion_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="Organizacion_Solicitud" Member="Solicituds" ThisKey="organizacion_id" OtherKey="organizacion_id" Type="Solicitud" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reporte" Member="Reportes">
+    <Type Name="Reporte">
+      <Column Name="reporte_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="horas_liberadas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="firma_coordinador" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="solicitud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Solicitud_Reporte" Member="Solicitud" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="Solicitud" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Solicitud" Member="Solicituds">
+    <Type Name="Solicitud">
+      <Column Name="solicitud_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="jefe_inmediato" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="numero_de_contacto" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="area" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="en_revision" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="aprobada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="rechazada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cancelada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="organizacion_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_solicitud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Solicitud_CartaAceptacion" Member="CartaAceptacions" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="CartaAceptacion" />
+      <Association Name="Solicitud_Entrega" Member="Entregas" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="Entrega" />
+      <Association Name="Solicitud_Reporte" Member="Reportes" ThisKey="solicitud_id" OtherKey="solicitud_id" Type="Reporte" />
+      <Association Name="Alumno_Solicitud" Member="Alumno" ThisKey="matricula" OtherKey="matricula" Type="Alumno" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Organizacion_Solicitud" Member="Organizacion" ThisKey="organizacion_id" OtherKey="organizacion_id" Type="Organizacion" IsForeignKey="true" />
+      <Association Name="TipoSolicitud_Solicitud" Member="TipoSolicitud" ThisKey="tipo_solicitud_id" OtherKey="tipo_solicitud_id" Type="TipoSolicitud" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoSolicitud" Member="TipoSolicituds">
+    <Type Name="TipoSolicitud">
+      <Column Name="tipo_solicitud_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoSolicitud_Solicitud" Member="Solicituds" ThisKey="tipo_solicitud_id" OtherKey="tipo_solicitud_id" Type="Solicitud" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoUsuario" Member="TipoUsuarios">
+    <Type Name="TipoUsuario">
+      <Column Name="tipo_usuario_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoUsuario_Usuario" Member="Usuarios" ThisKey="tipo_usuario_id" OtherKey="tipo_usuario_id" Type="Usuario" />
+    </Type>
+  </Table>
+</Database>

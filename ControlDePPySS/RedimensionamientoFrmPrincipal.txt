@@ -1,0 +1,24 @@
++panel1
+	width 974-694
+	height 574-539
+
+-dgvAlumnos
+	width 694-672
+	height 539-406
+
+-cmdNuevoAlumno | cmdModificarAlumno
+	y 539-499
+
+-pictureBox1
+	x 694-629
+
++groupBox1
+	x 974-701
+	height 574-511
+
+
+-panel2
+	y 511-395
+
+-cmdCerrarSesion
+	y 511-466

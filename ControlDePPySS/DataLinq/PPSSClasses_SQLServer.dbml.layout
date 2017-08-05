@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 12.875" name="PPSSClasses_SQLServer">
+  <DataContextMoniker Name="/PPSSClasses_SQLServerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d788a917-273f-49aa-84b0-649d71cc97b7" absoluteBounds="3.5, 6, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Alumno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4476aa43-6571-444e-b3f5-dd1bfb9f55c7" absoluteBounds="3.515, 6.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f90bfb89-745d-4ca1-8642-632573855514" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e098ef1-1b04-4bde-a1f6-6aca1fc0092c" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c47e8bbd-5038-4e26-927d-01a28fa3237b" absoluteBounds="9, 4.125, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/CartaAceptacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fc5eb86-b777-41cf-8b3b-78e8879b1650" absoluteBounds="9.015, 4.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="224690d0-78ae-4451-8f1b-ddaeb25c8d7b" absoluteBounds="9, 8.375, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Entrega" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54b8ce17-5ee7-42ad-85dc-f9e75cbd9827" absoluteBounds="9.015, 8.835, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4143e2e8-791a-41cc-98b7-5f0777896981" absoluteBounds="0.75, 6.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Licenciatura" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6f0ca8a-4da0-43ff-8640-4dfe98b9b585" absoluteBounds="0.765, 6.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea179ce6-0360-4044-a9a1-fa054e26fefe" absoluteBounds="3.5, 9.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Organizacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e198261-f60a-40fd-9f34-81738597f398" absoluteBounds="3.515, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19522287-1d9e-4a06-8a39-a13998aa646f" absoluteBounds="9, 1.375, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Reporte" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d78b1a5-e0c9-4a90-b778-5d88f2c1b6c6" absoluteBounds="9.015, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4cc64852-eb5f-4119-92dd-785d81fa1908" absoluteBounds="6.25, 5.5, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/Solicitud" />
+      <nestedChildShapes>
+        <elementListCompartment Id="618547dd-60cb-41ef-8898-2b742141cb87" absoluteBounds="6.265, 5.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c0ca574-5c4d-445a-ae2c-d9294f30363e" absoluteBounds="3.5, 3.375, 2, 1.193992513020834">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/TipoSolicitud" />
+      <nestedChildShapes>
+        <elementListCompartment Id="667ea6e2-303a-417d-8500-a51243d0bbdb" absoluteBounds="3.515, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2cdf4b8c-0743-417d-9186-52b60580835d" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PPSSClasses_SQLServerDataContext/TipoUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5a6d4ec-e8e2-4492-b123-642627038911" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.94314697265625); (3.5 : 6.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Licenciatura/Licenciatura_Alumno" />
+      <nodes>
+        <classShapeMoniker Id="4143e2e8-791a-41cc-98b7-5f0777896981" />
+        <classShapeMoniker Id="d788a917-273f-49aa-84b0-649d71cc97b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.56330485026042); (9 : 6.56330485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Solicitud/Solicitud_CartaAceptacion" />
+      <nodes>
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+        <classShapeMoniker Id="c47e8bbd-5038-4e26-927d-01a28fa3237b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 8.42470540364583); (7.25 : 10.5352609166667); (9 : 10.5352609166667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Solicitud/Solicitud_Entrega" />
+      <nodes>
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+        <classShapeMoniker Id="224690d0-78ae-4451-8f1b-ddaeb25c8d7b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 5.5); (7.25 : 2.35659912109375); (9 : 2.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Solicitud/Solicitud_Reporte" />
+      <nodes>
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+        <classShapeMoniker Id="19522287-1d9e-4a06-8a39-a13998aa646f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.98159912109375); (6.25 : 6.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Alumno/Alumno_Solicitud" />
+      <nodes>
+        <classShapeMoniker Id="d788a917-273f-49aa-84b0-649d71cc97b7" />
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.89263045833333); (6.7187475 : 9.89263045833333); (6.7187475 : 8.42470540364583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/Organizacion/Organizacion_Solicitud" />
+      <nodes>
+        <classShapeMoniker Id="ea179ce6-0360-4044-a9a1-fa054e26fefe" />
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.97199625651042); (6.7187475 : 3.97199625651042); (6.7187475 : 5.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/TipoSolicitud/TipoSolicitud_Solicitud" />
+      <nodes>
+        <classShapeMoniker Id="4c0ca574-5c4d-445a-ae2c-d9294f30363e" />
+        <classShapeMoniker Id="4cc64852-eb5f-4119-92dd-785d81fa1908" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSSClasses_SQLServerDataContext/TipoUsuario/TipoUsuario_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="2cdf4b8c-0743-417d-9186-52b60580835d" />
+        <classShapeMoniker Id="f90bfb89-745d-4ca1-8642-632573855514" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
