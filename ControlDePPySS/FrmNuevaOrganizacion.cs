@@ -24,7 +24,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void FrmNuevaOrganizacion_Load(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace ControlDePPySS
                     1)
                 {
                     MessageBox.Show("Organización registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {

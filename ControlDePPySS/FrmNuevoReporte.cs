@@ -88,7 +88,7 @@ namespace ControlDePPySS
                     )
                 {
                     MessageBox.Show("Reporte registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {
@@ -99,7 +99,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void comboMesI_SelectedIndexChanged(object sender, EventArgs e)

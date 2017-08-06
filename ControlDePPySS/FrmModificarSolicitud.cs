@@ -77,7 +77,7 @@ namespace ControlDePPySS
                     )
                 {
                     MessageBox.Show("Solicitud modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {
@@ -88,7 +88,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void cmdSeleccionar_Click(object sender, EventArgs e)

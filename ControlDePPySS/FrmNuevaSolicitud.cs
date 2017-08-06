@@ -51,7 +51,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace ControlDePPySS
                     )
                 {
                     MessageBox.Show("Solicitud registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {

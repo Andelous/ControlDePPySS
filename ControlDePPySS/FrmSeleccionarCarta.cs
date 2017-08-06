@@ -57,7 +57,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void dgvCartas_SelectionChanged(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace ControlDePPySS
                 obtenerCarta(
                     Convert.ToInt32(dgvCartas.SelectedRows[0].Cells[0].Value)
                     );
-            Hide();
+            Close();
         }
     }
 }

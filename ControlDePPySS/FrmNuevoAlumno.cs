@@ -46,7 +46,7 @@ namespace ControlDePPySS
                 ) == 1)
                 {
                     MessageBox.Show("Alumno registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
     }
 }

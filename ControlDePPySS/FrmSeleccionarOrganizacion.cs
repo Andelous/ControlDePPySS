@@ -44,7 +44,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace ControlDePPySS
                     Convert.ToInt32(dgvOrganizaciones.SelectedRows[0].Cells[0].Value)
                 );
 
-            Hide();
+            Close();
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

@@ -42,7 +42,7 @@ namespace ControlDePPySS
 
         private void cmdCerrarSesion_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
             FrmPrincipal_FormClosed(sender, null);
         }
 

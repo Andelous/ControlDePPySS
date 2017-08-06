@@ -33,7 +33,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace ControlDePPySS
                     )
                 {
                     MessageBox.Show("Organización modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {

@@ -118,7 +118,7 @@ namespace ControlDePPySS
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void cmdSeleccionarSolicitud_Click(object sender, EventArgs e)
@@ -184,7 +184,7 @@ namespace ControlDePPySS
                     )
                 {
                     MessageBox.Show("Carta de aceptación modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
+                    Close();
                 }
                 else
                 {
