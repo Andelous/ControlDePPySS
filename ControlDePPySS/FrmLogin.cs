@@ -25,8 +25,6 @@ namespace ControlDePPySS
         {
             try
             {
-                Vinculo_DB.inicializarConexion();
-
                 if (controladorSesion == null && Vinculo_DB.probarConexion())
                 {
                     controladorSesion = new ControladorSesion();

@@ -12,13 +12,39 @@ namespace ControlDePPySS.Controlador
 {
     public static class Vinculo_DB
     {
+        private static string[] datosConexion
+        {
+            get
+            {
+                return File.ReadAllLines("host.sys");
+            }
+        }
+        public static string userID
+        {
+            get
+            {
+                return datosConexion[0].Trim();
+            }
+        }
+        private static string password
+        {
+            get
+            {
+                return datosConexion[1].Trim();
+            }
+        }
         public static string dataSource
         {
             get
             {
-                string host = File.ReadAllText("host.sys").Trim();
-
-                return host;
+                return datosConexion[2].Trim();
+            }
+        }
+        public static string initialCatalog
+        {
+            get
+            {
+                return datosConexion[3].Trim();
             }
         }
         public static SqlConnectionStringBuilder scb { get; set; }
@@ -32,15 +58,16 @@ namespace ControlDePPySS.Controlador
         {
             scb = new SqlConnectionStringBuilder();
 
-            scb.UserID = "sa";
-            scb.Password = "Mexico.2017";
+            scb.UserID = userID;
+            scb.Password = password;
             scb.DataSource = dataSource + "\\SQLEXPRESS";
-            scb.InitialCatalog = "PPSS";
+            scb.InitialCatalog = initialCatalog;
         }
 
         public static PPSSClasses_SQLServerDataContext generarContexto()
         {
             PPSSClasses_SQLServerDataContext bd = null;
+            inicializarConexion();
 
             try
             {
@@ -61,6 +88,8 @@ namespace ControlDePPySS.Controlador
 
         public static bool probarConexion()
         {
+            inicializarConexion();
+
             try
             {
                 PPSSClasses_SQLServerDataContext bd = new PPSSClasses_SQLServerDataContext(

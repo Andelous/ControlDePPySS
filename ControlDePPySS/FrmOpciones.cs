@@ -20,33 +20,67 @@ namespace ControlDePPySS
 
         private void FrmOpciones_Load(object sender, EventArgs e)
         {
-            string host = "";
+            string[] datos = new string[4];
 
             if (File.Exists("host.sys"))
             {
-                host = File.ReadAllText("host.sys").Trim();
+                datos = File.ReadAllLines("host.sys");
             }
             else
             {
-                host = "No se ha determinado aún";
+                datos = new string[] { "Sin especificar", "Sin especificar", "Sin especificar", "Sin especificar" };
             }
 
-            txtHost.Text = host;
+            try
+            {
+                txtUsuario.Text = datos[0];
+            }
+            catch (Exception)
+            {
+                txtUsuario.Text = "Sin especificar";
+            }
+
+            //try
+            //{
+            //    txtContrasena.Text = datos[1];
+            //}
+            //catch (Exception)
+            //{
+            //    txtContrasena.Text = "Sin especificar";
+            //}
+
+            try
+            { 
+                txtHost.Text = datos[2];
+            }
+            catch (Exception)
+            {
+                txtHost.Text = "Sin especificar";
+            }
+
+            try
+            {
+                txtCatalogo.Text = datos[3];
+            }
+            catch (Exception)
+            {
+                txtCatalogo.Text = "Sin especificar";
+            }
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            string[] host = { txtHost.Text.Trim() };
+            string[] host = { txtUsuario.Text.Trim(), txtContrasena.Text.Trim(), txtHost.Text.Trim(), txtCatalogo.Text.Trim() };
 
             File.WriteAllLines("host.sys", host);
 
             MessageBox.Show("Guardado");
-            Hide();
+            Close();
         }
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
     }
 }
