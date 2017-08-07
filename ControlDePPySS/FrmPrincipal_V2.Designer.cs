@@ -1,6 +1,6 @@
 ﻿namespace ControlDePPySS
 {
-    partial class FrmPrincipal
+    partial class FrmPrincipal_V2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal_V2));
             this.panelAlumnos = new System.Windows.Forms.Panel();
             this.cmdActualizar = new System.Windows.Forms.Button();
             this.cmdEliminarAlumno = new System.Windows.Forms.Button();
@@ -349,7 +349,7 @@
             this.pctLaSalle.TabIndex = 2;
             this.pctLaSalle.TabStop = false;
             // 
-            // FrmPrincipal
+            // FrmPrincipal_V2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -359,7 +359,7 @@
             this.Controls.Add(this.panelAlumnos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(974, 574);
-            this.Name = "FrmPrincipal";
+            this.Name = "FrmPrincipal_V2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);

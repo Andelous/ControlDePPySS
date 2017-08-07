@@ -229,3 +229,11 @@ SELECT * FROM TipoSolicitud;
 SELECT * FROM Alumno;
 
 SELECT * FROM Solicitud;
+
+
+/*
+	
+	Área de modificaciones a la base de datos.
+	Versión Release 2.0
+
+*/

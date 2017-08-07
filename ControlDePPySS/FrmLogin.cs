@@ -40,9 +40,9 @@ namespace ControlDePPySS
                     {
                         Hide();
                         controladorSesion.usuarioActivo = usuario;
-                        FrmPrincipal frmPrincipal = new FrmPrincipal(this, controladorSesion);
+                        //FrmPrincipal frmPrincipal = new FrmPrincipal(this, controladorSesion);
+                        FrmPrincipal_V2 frmPrincipal = new FrmPrincipal_V2(this, controladorSesion);
                         frmPrincipal.Show();
-                        txtContrasena.Text = "";
                         txtUsuario.Text = "";
                         txtUsuario.Select();
                     }
