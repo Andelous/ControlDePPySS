@@ -105,8 +105,6 @@ namespace ControlDePPySS
 
                 cmdSolicitudes.Enabled = true;
                 cmdReportes.Enabled = true;
-                cmdCartaAceptacion.Enabled = true;
-                cmdEntrega.Enabled = false;
 
                 lblAlumno.Text =
                     dgvAlumnos.SelectedRows[0].Cells["nombres"].Value.ToString() + " " +
@@ -128,8 +126,6 @@ namespace ControlDePPySS
 
                 cmdSolicitudes.Enabled = false;
                 cmdReportes.Enabled = false;
-                cmdCartaAceptacion.Enabled = false;
-                cmdEntrega.Enabled = false;
             }
         }
 

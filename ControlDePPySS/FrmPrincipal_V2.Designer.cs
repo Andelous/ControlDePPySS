@@ -38,6 +38,7 @@
             this.cmdBuscarAlumnos = new System.Windows.Forms.Button();
             this.txtBuscarAlumnos = new System.Windows.Forms.TextBox();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.pctLaSalle = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbOpciones = new System.Windows.Forms.GroupBox();
             this.cmdOrganizaciones = new System.Windows.Forms.Button();
@@ -45,21 +46,18 @@
             this.lblMatricula = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAlumno = new System.Windows.Forms.Label();
-            this.cmdEntrega = new System.Windows.Forms.Button();
-            this.cmdCartaAceptacion = new System.Windows.Forms.Button();
             this.cmdCerrarSesion = new System.Windows.Forms.Button();
             this.cmdReportes = new System.Windows.Forms.Button();
             this.cmdSolicitudes = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pctLaSalle = new System.Windows.Forms.PictureBox();
             this.panelAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLaSalle)).BeginInit();
             this.gbOpciones.SuspendLayout();
             this.panelAlumno.SuspendLayout();
             this.panelUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLaSalle)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAlumnos
@@ -168,6 +166,16 @@
             this.dgvAlumnos.TabIndex = 33;
             this.dgvAlumnos.SelectionChanged += new System.EventHandler(this.dgvAlumnos_SelectionChanged);
             // 
+            // pctLaSalle
+            // 
+            this.pctLaSalle.Image = global::ControlDePPySS.Properties.Resources.Logo_login1;
+            this.pctLaSalle.Location = new System.Drawing.Point(629, 14);
+            this.pctLaSalle.Name = "pctLaSalle";
+            this.pctLaSalle.Size = new System.Drawing.Size(50, 59);
+            this.pctLaSalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctLaSalle.TabIndex = 2;
+            this.pctLaSalle.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -182,8 +190,6 @@
             // 
             this.gbOpciones.Controls.Add(this.cmdOrganizaciones);
             this.gbOpciones.Controls.Add(this.panelAlumno);
-            this.gbOpciones.Controls.Add(this.cmdEntrega);
-            this.gbOpciones.Controls.Add(this.cmdCartaAceptacion);
             this.gbOpciones.Controls.Add(this.cmdCerrarSesion);
             this.gbOpciones.Controls.Add(this.cmdReportes);
             this.gbOpciones.Controls.Add(this.cmdSolicitudes);
@@ -199,7 +205,7 @@
             // cmdOrganizaciones
             // 
             this.cmdOrganizaciones.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdOrganizaciones.Location = new System.Drawing.Point(6, 339);
+            this.cmdOrganizaciones.Location = new System.Drawing.Point(6, 254);
             this.cmdOrganizaciones.Name = "cmdOrganizaciones";
             this.cmdOrganizaciones.Size = new System.Drawing.Size(237, 40);
             this.cmdOrganizaciones.TabIndex = 41;
@@ -250,29 +256,6 @@
             this.lblAlumno.TabIndex = 27;
             this.lblAlumno.Text = "Sin selección";
             // 
-            // cmdEntrega
-            // 
-            this.cmdEntrega.Enabled = false;
-            this.cmdEntrega.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEntrega.Location = new System.Drawing.Point(6, 293);
-            this.cmdEntrega.Name = "cmdEntrega";
-            this.cmdEntrega.Size = new System.Drawing.Size(237, 40);
-            this.cmdEntrega.TabIndex = 40;
-            this.cmdEntrega.Text = "Entrega de expedientes";
-            this.cmdEntrega.UseVisualStyleBackColor = true;
-            // 
-            // cmdCartaAceptacion
-            // 
-            this.cmdCartaAceptacion.Enabled = false;
-            this.cmdCartaAceptacion.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCartaAceptacion.Location = new System.Drawing.Point(6, 182);
-            this.cmdCartaAceptacion.Name = "cmdCartaAceptacion";
-            this.cmdCartaAceptacion.Size = new System.Drawing.Size(237, 40);
-            this.cmdCartaAceptacion.TabIndex = 38;
-            this.cmdCartaAceptacion.Text = "Cartas de aceptación";
-            this.cmdCartaAceptacion.UseVisualStyleBackColor = true;
-            this.cmdCartaAceptacion.Click += new System.EventHandler(this.cmdCartaAceptacion_Click);
-            // 
             // cmdCerrarSesion
             // 
             this.cmdCerrarSesion.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -288,11 +271,11 @@
             // 
             this.cmdReportes.Enabled = false;
             this.cmdReportes.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdReportes.Location = new System.Drawing.Point(6, 228);
+            this.cmdReportes.Location = new System.Drawing.Point(6, 182);
             this.cmdReportes.Name = "cmdReportes";
             this.cmdReportes.Size = new System.Drawing.Size(237, 40);
             this.cmdReportes.TabIndex = 39;
-            this.cmdReportes.Text = "Reportes mensuales";
+            this.cmdReportes.Text = "Generar reportes";
             this.cmdReportes.UseVisualStyleBackColor = true;
             this.cmdReportes.Click += new System.EventHandler(this.cmdReportes_Click);
             // 
@@ -339,16 +322,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario:";
             // 
-            // pctLaSalle
-            // 
-            this.pctLaSalle.Image = global::ControlDePPySS.Properties.Resources.Logo_login1;
-            this.pctLaSalle.Location = new System.Drawing.Point(629, 14);
-            this.pctLaSalle.Name = "pctLaSalle";
-            this.pctLaSalle.Size = new System.Drawing.Size(50, 59);
-            this.pctLaSalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctLaSalle.TabIndex = 2;
-            this.pctLaSalle.TabStop = false;
-            // 
             // FrmPrincipal_V2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,12 +341,12 @@
             this.panelAlumnos.ResumeLayout(false);
             this.panelAlumnos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLaSalle)).EndInit();
             this.gbOpciones.ResumeLayout(false);
             this.panelAlumno.ResumeLayout(false);
             this.panelAlumno.PerformLayout();
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLaSalle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,8 +361,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelUsuario;
-        private System.Windows.Forms.Button cmdEntrega;
-        private System.Windows.Forms.Button cmdCartaAceptacion;
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.PictureBox pctLaSalle;
         private System.Windows.Forms.Label label3;
